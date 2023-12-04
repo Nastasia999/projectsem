@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="css/design.css">
 </head>
 <body>
 
@@ -49,8 +49,8 @@
                                 <p class="our_team_item_txt_title">Амир Реза Бахреман</p>
                                 <ul class="our_team_txt_duties">
                                     <li class="our_team_txt_duty">лидер 3 и 4 пунктов проекта</li>
-                                    <li class="our_team_txt_duty">шарит за соц контроль</li>
-                                    <li class="our_team_txt_duty">лидер 3 и 4 пунктов проекта</li>
+                                    <li class="our_team_txt_duty">шарит за соц контроль бабушек на лавочках</li>
+                                    <li class="our_team_txt_duty">профессионально </li>
                                 </ul>
                                 <p class="our_team_item_txt_main">Ответственный за методологию, этот умный малый покоряет всех жюри своей харизмой и богатым басом. На 1 этапе проекта был ответственным за методологию по социальному контроля нашей территории</p>
                             </div>
@@ -130,9 +130,10 @@
                 <div class="container">
                     <h1 class="section_title contact_title">Свяжитесь с нами</h1>
                     <p class="contacts_txt">Будем рады ответить на ваши вопросы!</p>
-                    <form action="#" class="form">
-                        <input type="имя" class="form_input" placeholder="Ваше имя">
-                        <input type="e-mail" class="form_input" placeholder="Ваш e-mail">
+                    <form class="form"   action="https://formspree.io/f/xdorqnny"
+                    method="POST">
+                        <input type="имя" id="name" class="form_input" required name="name" placeholder="Ваше имя">
+                        <input type="e-mail" id="email" class="form_input" required name="email" placeholder="Ваш e-mail">
                         <div class="radio">
                             <p class="radio_title">Вас интересует:</p>
                             <div class="radio_content">
@@ -144,8 +145,14 @@
                                <label class="radio_item_label" for="radio_3">Кофебрейк</label>
                         </div>
                         </div>
-                        <textarea class="form_txtarea" placeholder="Ваше сообщение"></textarea>
-                        <button  class="form_btn" type="отправить">отправить</button>
+                        <div class="numbers">
+                            <div class="nmb_container">
+                                <label for="coffee">Ваши предположения о том, сколько чашек кофе было выпито за весь проектсем:</label>
+                                <input type="number" id="coffee" name="coffee" min="100" max="794583056758677987" value="100" />
+                            </div>
+                        </div>
+                        <textarea class="form_txtarea" name="text_area" placeholder="Ваше сообщение"></textarea>
+                        <button class="form_btn" type="submit">отправить</button>
                     </form>
                 </div>
             </section>
@@ -207,6 +214,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="js/function.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js" ></script>
+    <script src="js/function.js"></script>
 </body>
 </html>
