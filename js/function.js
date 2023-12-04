@@ -22,6 +22,27 @@ const btnUp = {
 }
 btnUp.addEventListener();
 
+const tabs = document.querySelectorAll('.tabs_items .tabs_item');
+const onHashChange = () => {
+  const { hash } = window.location;
+  let counter = 0;
+  for (const tab of tabs) {
+    const addCall = () => tab.classList.add('active');
+
+    if (hash && tab.href.includes(hash)) {
+      addCall();
+    } else if(!hash && counter < 1) {
+      addCall();
+      counter++;
+    } else {
+      tab.classList.remove('active');
+    }
+  }
+}
+
+
+window.addEventListener("hashchange", onHashChange);
+onHashChange();
 /*const smoothLinks = document.querySelectorAll('a[href^="#main_web_map"]');
 for (let smoothLink of smoothLinks) {
     smoothLink.addEventListener('click', function (e) {
@@ -40,6 +61,7 @@ const swiper = new Swiper (".mySwiper", {
     el: ".swiper-pagination",
   },
 });
+
 
 /*function openMaps(evt, mapName) {
   var i, tabcontent, tablinks;
