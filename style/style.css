@@ -335,6 +335,9 @@ body {
 .radio_item {
     margin: 0.4rem;
 }
+.nmb_container {
+    padding: 20px 0;
+}
 .form_txtarea {
     width: 100%;
     resize: none;
@@ -411,7 +414,8 @@ body {
     font-weight: 700;
     cursor: pointer;
 }
-.tabs_item:hover {
+.tabs_item:hover, 
+.tabs_item.active {
     color: #fff;
     background-color: rgb(13, 48, 37);
     padding: 2px;
