@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашние задания</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1 id="back">Домашние задания</h1>
+        <table class="table">
+            <tr>
+             <th>Содержание:
+                <ol class="tbl_list">
+                    <li class="tbl_li"> <a href="#passport" class="tbl_li_link">Паспорт</a></li>
+                    <li class="tbl_li"><a href="#picture" class="tbl_li_link">Открывающаяся картинка</a></li>
+                    <li class="tbl_li"><a href="#task" class="tbl_li_link">Алгоритмическая задача</a></li>
+                </ol>
+             </th>
+            </tr>
+                <table class="sub_table">
+                    <tr>
+                       <td id="passport" class="tbl_block">
+                           <div class="passport_content">
+                             <h4>Российская Федерация</h4>
+                             <p>Паспорт выдан<span><pre>Отделом ГУ МВД по г.Москва</pre></span></p>
+                             <p>Фамилия<span><pre>Ерохина</pre></span></p>
+                             <p>Имя<span><pre>Анастасия</pre></span></p>
+                             <p>Отчество<span><pre>Александровна</pre></span></p>
+                             <p>Год рождения<span><pre>09.03.2004</pre></span></p>
+                             <p id="for_click" onclick="find_edit()">click</p>
+                           </div>
+                        </td>
+                        <td id="picture" class="tbl_block"> 
+                            <a href="cat.html" class="tbl_img_link"><img src="12005162247234047.jpg" alt="" width="100px"></a>
+                        </td>
+                        <td id="task" class="tbl_block"> 
+                          <h1 class="title"></h1>
+                          <p class="task">
+                            Определить значение функции Z = 1/(XY) при произвольных X и Y
+                          </p>
+                           X = <input type="text" id="x">
+                           Y = <input type="text" id="y">
+           
+                           <p>Результат: <span id="result"></span></p>
+                           <a href="https://yandex.ru/maps/213/moscow/?ll=37.617700%2C55.755863&z=10" id="verify">Оценить</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#back" class="tbl_back_link">Вернуться к началу</a>
+                        </td>
+                    </tr>
+                </table>
+            </tr>
+        </table>
+    </div>
+</body>
+<script src="js/function.js"></script>
+</html>
